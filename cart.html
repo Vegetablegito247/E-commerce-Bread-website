@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./style/view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="nave">
+        <div class="logo">
+            <h3>Breadies</h3>
+            <i class="fa-sharp fa-solid fa-bread-slice"></i>
+        </div>
+        <div class="user-data">
+            <div class="user-account">
+                <span>Account</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="user-cart">
+                <span>Cart</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+
+        <div class="close-modal"></div>
+
+        <div class="dis-user-account">
+            <button class="dis-user-signIn">sign in</button>
+            <ul class="dis-user-acc-list">
+                <li><a href="">My Profile</a></li>
+                <li><a href="">Orders</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cart-main-items">
+            <div class="cart-cont">
+                <div class="cart-main">
+                    <div class="cart-main-flex">
+                        <img src="./images/chocolate-and-banana.jpeg" alt="">
+                        <div class="cart-main-dis">
+                            <h5>Banana bread</h5>
+                            <span>N3000</span>
+                        </div>
+                    </div>
+                    <div class="cart-del-or-add">
+                        <div class="del">
+                            <i class="fa-solid fa-trash"></i>
+                            <span>remove</span>
+                        </div>
+                        <div class="add">
+                            <i class="fa-solid fa-minus"></i>
+                            <span>O</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <h3>Cart summary</h3>
+                <div class="summary-total">
+                    <h4>Subtotal</h4>
+                    <span>0</span>
+                </div>
+                <div class="check-out">
+                    <button id="checkBtn">checkout(0)</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

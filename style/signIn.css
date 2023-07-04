@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #898989;
+    --intermediate-color: #d50000;
+}
+
+.head-logo {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 2rem;
+}
+
+.head-logo h1 {
+    margin-right: 1rem;
+}
+
+.head-logo .fa-bread-slice {
+    color: var(--intermediate-color);
+    font-size: 34px;
+}
+
+.sign-in {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 2px 6px 10px var(--secondary-color);
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--intermediate-color);
+    margin: 1rem 0 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--intermediate-color);
+    font-size: 12px;
+    display: none;
+}
+
+.uName-err {
+    line-height: 30px;
+}
