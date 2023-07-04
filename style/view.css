@@ -50,6 +50,10 @@ body {
     margin-right: 10px;
 }
 
+    .user-account .fa-user {
+        display: none;
+    }
+
 .user-account i, 
 .user-cart i {
     font-size: 18px;
@@ -137,7 +141,7 @@ body {
 .cart-main-items {
     width: 100%;
     padding: 10px 60px;
-    margin-top: 8rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -156,7 +160,7 @@ body {
 .cart-main {
     width: 100%;
     border: 1px solid var(--intermediate-color);
-    padding: 15px;
+    padding: 10px;
     border-radius: 6px;
 }
 
@@ -250,4 +254,61 @@ body {
     color: var(--primary-color);
     font-size: 14px;
     font-weight: 500;
+}
+
+@media (max-width: 576px) {
+        .nave {
+        padding: 20px;
+    }
+
+    .logo h3 {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .info {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .logo .fa-bread-slice {
+        font-size: 16px;
+    }
+
+    .user-data {
+        width: 70px;
+    }
+
+    .user-account span,
+    .user-cart .cart-img,
+    .user-account .fa-chevron-down {
+        display: none;
+    }
+
+    .user-account .fa-user {
+        display: block;
+    }
+
+    .cart-main-items {
+        display: block;
+        padding: 0 10px;
+    }
+
+    .cart-main-dis span {
+        font-size: 11px;
+    }
+
+    .cart-cont {
+        width: 100%;
+    }
+
+    .summary {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .summary h3,
+    .cart-main-dis h5 {
+        font-size: 13px;
+    }
 }

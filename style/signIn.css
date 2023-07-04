@@ -38,7 +38,7 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: auto;
-    row-gap: 1rem;
+    row-gap: .4rem;
 }
 
 input[type="text"],
@@ -48,6 +48,10 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+}
+
+input[type="password"] {
+    margin-top: 1rem;
 }
 
 button {
@@ -69,9 +73,13 @@ button:hover {
 span {
     color: var(--intermediate-color);
     font-size: 12px;
-    display: none;
+    display: block;
 }
 
-.uName-err {
-    line-height: 30px;
+@media (max-width: 576px) {
+    .sign-in {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
 }
