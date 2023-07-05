@@ -15,50 +15,52 @@
         <h1>BREADIES</h1>
         <i class="fa-sharp fa-solid fa-bread-slice"></i>
     </div>
-    <form action="" class="sign-up">
+    <div action="" class="sign-up">
         <h3>Create your account</h3>
         <!-- user description -->
 
         <div class="fName">
-            <label for="">*</label>
-            <input type="text" placeholder="Your name">
+            <span>*</span>
+            <input type="text" placeholder="Your name" id="fName">
         </div>
         <div class="lName">
-            <label for="">*</label>
-            <input type="text" placeholder="Your last-name">
+            <span>*</span>
+            <input type="text" placeholder="Your last-name" id="lName">
         </div>
 
         <!-- address -->
 
         <div class="cities">
             <div class="address">
-                <label for="">*</label>
-                <input type="text" placeholder="Your home address">
+                <span>*</span>
+                <input type="text" placeholder="Your home address" id="home-address">
             </div>
             <div class="city">
-                <label for="">*</label>
-                <input type="text" placeholder="The city you stay in">
+                <span>*</span>
+                <input type="text" placeholder="The city you stay in" id="city">
             </div>
         </div>
         <div class="states">
             <div class="state">
-                <label for="">*</label>
-                <input type="text" placeholder="The state you stay in">
+                <span>*</span>
+                <input type="text" placeholder="The state you stay in" id="state">
             </div>
             <div class="country">
-                <label for="">*</label>
-                <select name="" id=""></select>
+                <span>*</span>
+                <select name="" id="country">
+                    <option value="">Nigeria</option>
+                </select>
             </div>
         </div>
 
         <div class="pass-word">
             <div class="cont-pWord">
-                <label for="">*</label>
+                <span>*</span>
                 <input type="password" id="pWord"
                 placeholder="set pass-word">
             </div>
             <div class="cont-cPword">
-                <label for="">*</label>
+                <span>*</span>
                 <input type="password" id="cPword" placeholder="confirm pass-word">
             </div>
         </div>
@@ -67,16 +69,18 @@
 
         <div class="contact">
             <div class="number">
-                <label for="">*</label>
-                <input type="tel" id="" placeholder="Your contact address">
+                <span>*</span>
+                <input type="tel" id="number" placeholder="Your contact address">
             </div>
             <div class="email">
-                <label for="">*</label>
-                <input type="email" name="" id="" placeholder="Your e-mail address">
+                <span>*</span>
+                <input type="email" name="" id="email" placeholder="Your e-mail address">
             </div>
         </div>
 
-        <button>sign-up</button>
-    </form>
+        <button id="get-in">sign-up</button>
+    </div>
+
+    <script src="./javascriptFolders/signUp.js"></script>
 </body>
 </html>

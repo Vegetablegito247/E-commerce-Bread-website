@@ -54,7 +54,7 @@ input[type="password"] {
     margin-top: 1rem;
 }
 
-button {
+.sign-in button {
     width: 100%;
     padding: 10px;
     background-color: var(--intermediate-color);
@@ -73,7 +73,7 @@ button:hover {
 .sign-in span {
     color: var(--intermediate-color);
     font-size: 12px;
-    display: block;
+    display: none;
 }
 
 .redirect {
