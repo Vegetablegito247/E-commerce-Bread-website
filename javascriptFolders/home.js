@@ -9,6 +9,8 @@ let userAcc = document.querySelector('.user-account');
 let userProfile = document.querySelector('.user-account span');
 let disUserAcc = document.querySelector('.dis-user-account');
 
+let signOut = document.querySelector('.dis-user-signIn')
+
 let closeModal = document.querySelector('.close-modal');
 
 
@@ -29,10 +31,16 @@ userAcc.addEventListener('click', () => {
     closeModal.addEventListener('click', () => {
         disUserAcc.style.display = 'none';
         closeModal.style.display = 'none';
-    })
-})
+    });
+});
 
 closeWelcome.addEventListener('click', () => {
     popMsg.style.display = 'none';
     closeModal.style.display = 'none';
-})
+});
+
+// log out
+
+signOut.addEventListener('click', () => {
+    window.location = './index.html';
+});
