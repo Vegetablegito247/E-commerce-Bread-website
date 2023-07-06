@@ -561,8 +561,10 @@ footer {
     }
 
     .pop-up-msg {
-        width: 300px;
+        position: fixed;
+        width: 350px;
         left: 15%;
+        top: 40%;
     }
 
     .breads {
@@ -615,8 +617,8 @@ footer {
 
 @media (max-width: 428px) {
     .pop-up-msg {
-        width: 270px;
-        left: 10%;
+        width: 340px;
+        left: 8%;
         padding: 10px;
     }
 
@@ -635,5 +637,12 @@ footer {
 
     .footer-list {
         grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .pop-up-msg {
+        width: 280px;
+        left: 8%;
     }
 }
