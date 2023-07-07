@@ -42,18 +42,21 @@ pass()
 
 function condition(para) {
     if (para.value === '') {
-        console.log('fill in your details')
-        para.style.border = '1px solid red'
+        console.log('fill in your details');
+        para.style.border = '1px solid red';
+
         return false
     }
     else if (para.value.length < 3) {
         console.log('characters cannot be less than 3');
         para.style.border = '1px solid red';
+
         return false
     }
     else if (para.value.length > 50) {
         console.log('characters cannot be greater than 30');
         para.style.border = '1px solid red';
+
         return false
     }
     else {
@@ -65,52 +68,72 @@ function checkPassWord(check, otherCheck) {
     if (check.value === '') {
         alert('Pass-word field cannot be empty');
         check.style.border = '1px solid red';
+
+        return false
     }
 
     else if (otherCheck.value === '') {
         alert('confirm pass-word field cannot be empty');
         otherCheck.style.border = '1px solid red';
+
+        return false
     }
 
     else if(check.value === '' && otherCheck.value === '') {
         check.style.border = '1px solid red';
         otherCheck.style.border = '1px solid red';
+
+        return false
     }
 
     else if (otherCheck.value !== check.value) {
         alert(`Pass-word doesn't match, Please check again`);
         check.style.border = '1px solid red';
         otherCheck.style.border = '1px solid red';
+
+        return false
     }
 
     else {
         check.style.border = '1px solid green';
         otherCheck.style.border = '1px solid green';
+
+        return true
     }
 }
 
 function checkNumber(checkNo) {
     if (checkNo.value === '') {
         checkNo.style.border = '1px solid red';
+
+        return false
     }
 
     else if(checkNo.value.length > 11) {
-        alert(`Your contact address value cannot exceed 11 characters`)
-        checkNo.style.border = '1px solid red'
+        alert(`Your contact address value cannot exceed 11 characters`);
+        checkNo.style.border = '1px solid red';
+
+        return false
     }
 
     else {
         checkNo.style.border = '1px solid green';
+
+        return true
     }
 }
 
 function checkEmail(em) {
     if (em.value === '') {
         em.style.border = '1px solid red';
+
+        return false
     }
 
     else {
         em.style.border = '1px solid green';
+        
+        return true
     }
 }
 
