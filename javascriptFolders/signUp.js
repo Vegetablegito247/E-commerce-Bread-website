@@ -61,8 +61,61 @@ function condition(para) {
     }
 }
 
+function checkPassWord(check, otherCheck) {
+    if (check.value === '') {
+        alert('Pass-word field cannot be empty');
+        check.style.border = '1px solid red';
+    }
+
+    else if (otherCheck.value === '') {
+        alert('confirm pass-word field cannot be empty');
+        otherCheck.style.border = '1px solid red';
+    }
+
+    else if(check.value === '' && otherCheck.value === '') {
+        check.style.border = '1px solid red';
+        otherCheck.style.border = '1px solid red';
+    }
+
+    else if (otherCheck.value !== check.value) {
+        alert(`Pass-word doesn't match, Please check again`);
+        check.style.border = '1px solid red';
+        otherCheck.style.border = '1px solid red';
+    }
+
+    else {
+        check.style.border = '1px solid green';
+        otherCheck.style.border = '1px solid green';
+    }
+}
+
+function checkNumber(checkNo) {
+    if (checkNo.value === '') {
+        checkNo.style.border = '1px solid red';
+    }
+
+    else if(checkNo.value.length > 11) {
+        alert(`Your contact address value cannot exceed 11 characters`)
+        checkNo.style.border = '1px solid red'
+    }
+
+    else {
+        checkNo.style.border = '1px solid green';
+    }
+}
+
+function checkEmail(em) {
+    if (em.value === '') {
+        em.style.border = '1px solid red';
+    }
+
+    else {
+        em.style.border = '1px solid green';
+    }
+}
+
 signUpBtn.addEventListener('click', () => {
-    if(condition(fName) && condition(lName) && condition(address) && condition(city) && condition(state)) {
+    if(condition(fName) && condition(lName) && condition(address) && condition(city) && condition(state) && checkPassWord(pWord, cpWord) && checkNumber(number) && checkEmail(email)) {
         let userValue = {
             uName: fName.value,
             uLname: lName.value,
