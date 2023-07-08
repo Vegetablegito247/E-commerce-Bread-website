@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,11 +23,6 @@
                 <i class="fa-solid fa-chevron-down"></i>
                 <i class="fa-solid fa-user"></i>
             </div>
-            <div class="user-cart">
-                <span class="cart-img">Cart</span>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-count">0</span>
-            </div>
         </div>
 
         <div class="close-modal"></div>
@@ -35,8 +30,7 @@
         <div class="dis-user-account">
             <button class="dis-user-signIn">sign in</button>
             <ul class="dis-user-acc-list">
-                <li><a href="">My Profile</a></li>
-                <li><a href="">Orders</a></li>
+                <li><a href="./user.html">My Profile</a></li>
             </ul>
         </div>
     </nav>
@@ -44,26 +38,7 @@
     <main>
         <div class="cart-main-items">
             <div class="cart-cont">
-                <div class="cart-main">
-                    <div class="cart-main-flex">
-                        <img src="./images/chocolate-and-banana.jpeg" alt="">
-                        <div class="cart-main-dis">
-                            <h5>Banana bread</h5>
-                            <span>N3000</span>
-                        </div>
-                    </div>
-                    <div class="cart-del-or-add">
-                        <div class="del">
-                            <i class="fa-solid fa-trash"></i>
-                            <span>remove</span>
-                        </div>
-                        <div class="add">
-                            <i class="fa-solid fa-minus"></i>
-                            <span>O</span>
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
+                <div class="empty" style="display: none;"></div>
             </div>
             <div class="summary">
                 <h3>Cart summary</h3>
@@ -72,11 +47,13 @@
                     <span>0</span>
                 </div>
                 <div class="check-out">
-                    <button id="checkBtn">checkout(0)</button>
+                    <button id="checkBtn">0</button>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="./javascriptFolders/cart.js"></script>
 </body>
 
 </html>

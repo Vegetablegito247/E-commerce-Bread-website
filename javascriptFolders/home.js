@@ -44,3 +44,32 @@ closeWelcome.addEventListener('click', () => {
 signOut.addEventListener('click', () => {
     window.location = './index.html';
 });
+
+const addToCart = () => {
+    const addButtons = document.querySelectorAll('.order');
+    const cart = [];
+  
+    addButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const breadItemContainer = event.target.closest('.bread-items');
+        let cartInfo = document.querySelector('.user-cart');
+        let cartQuantity = parseInt(cartInfo.querySelector('.cart-count').textContent)
+
+        // upgrade cart quantity 
+        cartQuantity++;
+        cartInfo.querySelector('.cart-count').textContent = cartQuantity;
+
+        const breadItem = {
+          image: breadItemContainer.querySelector('img').src,
+          name: breadItemContainer.querySelector('h3').textContent,
+          price: parseInt(breadItemContainer.querySelector('span').textContent.slice(1))
+        };
+        cart.push(breadItem);
+        console.log('Item added to cart:', cart);
+        let cartDetails = JSON.stringify(cart);
+        localStorage.setItem('cartGet', cartDetails)
+      });
+    });
+  };
+   
+  addToCart();
