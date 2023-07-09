@@ -193,6 +193,10 @@ body {
     margin-left: 5px;
 }
 
+main {
+    margin-top: 6rem;
+}
+
 .summary {
     width: 250px;
     height: fit-content;
