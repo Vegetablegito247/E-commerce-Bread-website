@@ -3,6 +3,9 @@
 let bringCart = localStorage.getItem('cartGet');
 let useCart = JSON.parse(bringCart);
 
+// let bringBuyCart = localStorage.getItem('buyGet');
+// let useBuy = JSON.parse(bringBuyCart);
+
 let cartCont = document.querySelector('.cart-cont');
 let subTotal = document.querySelector('.summary-total span');
 let checkOutBtn = document.querySelector('#checkBtn');
@@ -32,7 +35,7 @@ signOut.addEventListener('click', () => {
 
 let total = 0;
 
-useCart.forEach((value, index, array) => {
+useBuy.forEach((value, index, array) => {
     // placing in the items
 
     let cartMain = document.createElement('div');

@@ -25,17 +25,23 @@
             <div class="user-account">
                 <span>Account</span>
                 <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-user"></i>
             </div>
-            <i class="fa-solid fa-user"></i>
         </div>
 
         <div class="close-modal"></div>
 
+        <div class="scsfull-order">
+            <h2>
+                 Your Order has been placed successfully 
+            </h2>
+            <button id="home-page">&#127881; Go back to home page &#127881;</button>
+        </div>
+
         <div class="dis-user-account">
             <button class="dis-user-signIn">sign in</button>
             <ul class="dis-user-acc-list">
-                <li><a href="">My Profile</a></li>
-                <li><a href="">Orders</a></li>
+                <li><a href="./user.html">My Profile</a></li>
             </ul>
         </div>
     </nav>
@@ -64,14 +70,16 @@
                 <div class="payment-body">
                     <input type="text" id="card-number" placeholder="Card Number">
                     <div class="mon-year">
-                        <input type="date">
-                        <input type="text" id="" placeholder="CVV">
+                        <input type="date" id="dateTime">
+                        <input type="text" id="cvv" placeholder="CVV">
                     </div>
                 </div>
-                <button>Pay now: N3000</button>
+                <button class="summaryBtn">Pay now: N3000</button>
             </div>
         </div>
     </main>
+
+    <script src="./javascriptFolders/summary.js"></script>
 </body>
 
 </html>

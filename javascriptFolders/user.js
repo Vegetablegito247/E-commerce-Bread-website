@@ -4,6 +4,8 @@ let userAcc = document.querySelector('.user-account');
 let userProfile = document.querySelector('.user-account span');
 let disUserAcc = document.querySelector('.dis-user-account');
 
+let cartPage = document.querySelector('.user-cart');
+
 let closeModal = document.querySelector('.close-modal');
 
 let edit = document.querySelector('.acc-edit');
@@ -17,7 +19,7 @@ let userNo = document.querySelector('.user-no');
 let accInfo = localStorage.getItem('userDetails');
 let accGet = JSON.parse(accInfo);
 
-let signOut = document.querySelector('.dis-user-signIn')
+let signOut = document.querySelector('.dis-user-signIn');
 
 // toggle
 
@@ -50,4 +52,10 @@ signOut.addEventListener('click', () => {
 
 edit.addEventListener('click', () => {
     window.location = './signup.html';
-})
+});
+
+// going to cart page
+
+cartPage.addEventListener('click', () => {
+    window.location = './cart.html';
+});

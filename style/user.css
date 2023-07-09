@@ -135,7 +135,8 @@ body {
     border-radius: 5px;
 }
 
-.dis-user-account ul li a {
+.dis-user-account ul li a,
+.logo h3 a {
     text-decoration: none;
     color: #000000;
 }

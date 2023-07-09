@@ -33,7 +33,7 @@ function eMailErrDetails(msg = '', display = 'block', bColor = 'red',) {
     email.style.border = '1px solid ' + bColor;
 }
 
-function pWordErrDetails(msg = '', display = 'block', bColor = 'red',) {
+function pWordErrDetails(msg = '', display = 'block', bColor = 'red') {
     pWordErr.innerText = msg;
     pWordErr.style.display = display;
     pWord.style.border = '1px solid ' + bColor;
