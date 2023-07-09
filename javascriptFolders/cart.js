@@ -35,80 +35,80 @@ signOut.addEventListener('click', () => {
 
 let total = 0;
 
-// useBuy.forEach((value, index, array) => {
-//     // placing in the items
+useCart.forEach((value, index, array) => {
+    // placing in the items
 
-//     let cartMain = document.createElement('div');
-//     cartMain.classList.add('cart-main');
+    let cartMain = document.createElement('div');
+    cartMain.classList.add('cart-main');
 
-//     total += parseFloat(value.price);
-//     subTotal.textContent = `N${total}`;
-//     checkOutBtn.textContent = `checkout (N${total})`;
+    total += parseFloat(value.price);
+    subTotal.textContent = `N${total}`;
+    checkOutBtn.textContent = `checkout (N${total})`;
 
-//     cartMain.innerHTML = `
-//     <div class="cart-main-flex">
-//       <img src="${value.image}" alt="">
-//       <div class="cart-main-dis">
-//           <h5>${value.name}</h5>
-//           <span>N${value.price}</span>
-//       </div>
-//     </div>
-//     <div class="cart-del-or-add">
-//       <div class="del">
-//           <i class="fa-solid fa-trash"></i>
-//           <span>remove</span>
-//       </div>
-//       <div class="add">
-//           <i class="fa-solid fa-minus"></i>
-//           <span>O</span>
-//           <i class="fa-solid fa-plus"></i>
-//       </div>
-//     </div>
-//     `;
+    cartMain.innerHTML = `
+    <div class="cart-main-flex">
+      <img src="${value.image}" alt="">
+      <div class="cart-main-dis">
+          <h5>${value.name}</h5>
+          <span>N${value.price}</span>
+      </div>
+    </div>
+    <div class="cart-del-or-add">
+      <div class="del">
+          <i class="fa-solid fa-trash"></i>
+          <span>remove</span>
+      </div>
+      <div class="add">
+          <i class="fa-solid fa-minus"></i>
+          <span>O</span>
+          <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+    `;
 
-//     // updating the price
+    // updating the price
 
-//     let add = cartMain.querySelector('.fa-plus');
-//     let minus = cartMain.querySelector('.fa-minus');
-//     let numValue = cartMain.querySelector('.add span');
-//     let number = 1;
+    let add = cartMain.querySelector('.fa-plus');
+    let minus = cartMain.querySelector('.fa-minus');
+    let numValue = cartMain.querySelector('.add span');
+    let number = 1;
 
-//     numValue.innerHTML = number;
-//     let del = cartMain.querySelector('.del');
+    numValue.innerHTML = number;
+    let del = cartMain.querySelector('.del');
 
-//     del.addEventListener('click', () => {
-//         cartMain.remove();
-//         total -= parseFloat(value.price);
-//         subTotal.textContent = total;
-//         checkOutBtn.textContent = `checkout${total}`;
-//     });
+    del.addEventListener('click', () => {
+        cartMain.remove();
+        total -= parseFloat(value.price);
+        subTotal.textContent = total;
+        checkOutBtn.textContent = `checkout${total}`;
+    });
 
-//     add.addEventListener('click', () => {
-//         if (number < 20) {
-//             number++;
-//             numValue.innerText = number;
-//             total += parseFloat(value.price);
-//             subTotal.textContent = `N${total}`;
-//             checkOutBtn.textContent = `checkout (N${total})`;
-//         }
-//     });
+    add.addEventListener('click', () => {
+        if (number < 20) {
+            number++;
+            numValue.innerText = number;
+            total += parseFloat(value.price);
+            subTotal.textContent = `N${total}`;
+            checkOutBtn.textContent = `checkout (N${total})`;
+        }
+    });
 
-//     minus.addEventListener('click', () => {
-//         if (number > 1) {
-//             number--;
-//             numValue.innerText = number;
-//             total -= parseFloat(value.price);
-//             subTotal.textContent = `N${total}`;
-//             checkOutBtn.textContent = `checkout (N${total})`;
-//         }
-//     });
+    minus.addEventListener('click', () => {
+        if (number > 1) {
+            number--;
+            numValue.innerText = number;
+            total -= parseFloat(value.price);
+            subTotal.textContent = `N${total}`;
+            checkOutBtn.textContent = `checkout (N${total})`;
+        }
+    });
 
-//     cartCont.insertBefore(cartMain, cartCont.querySelector('.empty'));
+    cartCont.insertBefore(cartMain, cartCont.querySelector('.empty'));
 
-//     let checkOutTotal = JSON.stringify(total);
-//     localStorage.setItem('FinalPrice', checkOutTotal);
+    let checkOutTotal = JSON.stringify(total);
+    localStorage.setItem('FinalPrice', checkOutTotal);
 
-//     checkOutBtn.addEventListener('click', () => {
-//         window.location = './summary.html';
-//     })
-// });
+    checkOutBtn.addEventListener('click', () => {
+        window.location = './summary.html';
+    })
+});
