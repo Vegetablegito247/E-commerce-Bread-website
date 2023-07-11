@@ -35,22 +35,22 @@ signOut.addEventListener('click', () => {
 
 let total = 0;
 
-useCart.forEach((value, index, array) => {
+useBuy.forEach((value, index, array) => {
     // placing in the items
 
     let cartMain = document.createElement('div');
     cartMain.classList.add('cart-main');
 
-    total += parseFloat(value.price);
+    total += parseFloat(value.buyprice);
     subTotal.textContent = `N${total}`;
     checkOutBtn.textContent = `checkout (N${total})`;
 
     cartMain.innerHTML = `
     <div class="cart-main-flex">
-      <img src="${value.image}" alt="">
+      <img src="${value.buyimage}" alt="">
       <div class="cart-main-dis">
-          <h5>${value.name}</h5>
-          <span>N${value.price}</span>
+          <h5>${value.buyname}</h5>
+          <span>N${value.buyprice}</span>
       </div>
     </div>
     <div class="cart-del-or-add">
@@ -78,7 +78,7 @@ useCart.forEach((value, index, array) => {
 
     del.addEventListener('click', () => {
         cartMain.remove();
-        total -= parseFloat(value.price);
+        total -= parseFloat(value.buyprice);
         subTotal.textContent = total;
         checkOutBtn.textContent = `checkout${total}`;
     });
@@ -87,7 +87,7 @@ useCart.forEach((value, index, array) => {
         if (number < 20) {
             number++;
             numValue.innerText = number;
-            total += parseFloat(value.price);
+            total += parseFloat(value.buyprice);
             subTotal.textContent = `N${total}`;
             checkOutBtn.textContent = `checkout (N${total})`;
         }
@@ -97,7 +97,7 @@ useCart.forEach((value, index, array) => {
         if (number > 1) {
             number--;
             numValue.innerText = number;
-            total -= parseFloat(value.price);
+            total -= parseFloat(value.buyprice);
             subTotal.textContent = `N${total}`;
             checkOutBtn.textContent = `checkout (N${total})`;
         }
@@ -112,4 +112,3 @@ useCart.forEach((value, index, array) => {
         window.location = './summary.html';
     })
 });
-

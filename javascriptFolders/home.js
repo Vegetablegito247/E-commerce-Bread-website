@@ -76,31 +76,31 @@ const addToCart = () => {
 
 addToCart();
 
-// const buyNow = () => {
-//   let buyBtn = document.querySelectorAll('.buy');
-//   let bringCart = []
+const buyNow = () => {
+  let buyBtn = document.querySelectorAll('.buy');
+  let bringCart = []
 
-//   buyBtn.forEach((btn) => {
-//     btn.addEventListener('click', (event) => {
-//       let breadItemContainer = event.target.closest('.bread-items');
+  buyBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      let breadItemContainer = event.target.closest('.bread-items');
 
-//       let breadItem = {
-//         image: breadItemContainer.querySelector('img').src,
-//         name: breadItemContainer.querySelector('h3').textContent,
-//         price: parseInt(breadItemContainer.querySelector('span').textContent.slice(1))
-//       };
+      let buybreadItem = {
+        buyimage: breadItemContainer.querySelector('img').src,
+        buyname: breadItemContainer.querySelector('h3').textContent,
+        buyprice: parseInt(breadItemContainer.querySelector('span').textContent.slice(1))
+      };
 
-//       bringCart.push(breadItem)
+      bringCart.push(buybreadItem)
 
-//       let buyNowDetails = JSON.stringify(bringCart);
-//       localStorage.setItem('buyGet', buyNowDetails);
+      let buyNowDetails = JSON.stringify(bringCart);
+      localStorage.setItem('buyGet', buyNowDetails);
 
-//       window.location = './cart.html';
-//     })
-//   })
-// }
+      window.location = './buyNow.html';
+    })
+  })
+}
 
-// buyNow();
+buyNow();
 
 // going to cart page
 
