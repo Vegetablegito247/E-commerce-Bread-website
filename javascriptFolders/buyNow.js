@@ -110,5 +110,5 @@ useBuy.forEach((value, index, array) => {
 
     checkOutBtn.addEventListener('click', () => {
         window.location = './summary.html';
-    })
+    });
 });
